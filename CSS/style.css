@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap");
 
 :root {
-  --font-principal: 'Sriracha', cursive;
-  --font-destaque: 'Passion One', cursive;
+  --font-principal: "Sriracha", cursive;
+  --font-destaque: "Passion One", cursive;
 }
 * {
   margin: 0;
@@ -13,19 +13,21 @@
   font-size: 3vh;
   max-width: 100vw;
 }
+html,
+body {
+  min-height: 100vh;
+}
 
 header {
   max-height: 25vh;
   background-color: black;
   color: white;
-  padding:3%;
-    justify-content: center;
-  
+  padding: 3%;
+  justify-content: center;
 }
 #titulo {
   text-align: center;
   margin: 0 auto;
-
 }
 #titulo > h1 {
   font-family: var(--font-destaque);
@@ -35,20 +37,23 @@ header {
   font-family: var(--font-destaque);
   font-size: 2vw;
 }
+section {
+  line-height: 2em;
+}
 #section01 {
   padding: 5vw;
 }
 #section02 {
   padding: 5vw 0 5vw 1vw;
-  background-image: url(../imagens/background001.jpg);
+  background: black url(../imagens/background001.jpg) no-repeat right center
+    fixed;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-attachment: fixed;
   color: white;
+  box-shadow: inset 6px 6px 13px 0px #0000006c;
 }
 #section02 > p {
-  background-color: rgba(0, 0, 0, 0.281);
+  background-color: #00000048;
+  text-shadow: 1px 1px 0px black;
   padding: 30px;
   margin: 0;
   width: 50vw;
@@ -62,16 +67,33 @@ header {
 }
 #section05 {
   padding: 5vw 0 5vw 1vw;
-  background-image: url(../imagens/background002.jpg);
+  background: black url("../imagens/background002.jpg") no-repeat right center
+    fixed;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-attachment: fixed;
+  box-shadow: inset 6px 6px 13px 0px #0000006c;
   color: white;
 }
 #section05 > p {
-  background-color: rgba(0, 0, 0, 0.384);
+  background-color: #00000062;
+  text-shadow: 1px 1px 0px black;
   padding: 30px;
   margin: 0;
   width: 50vw;
+}
+footer {
+  min-height: 8vh;
+  display: flex;
+  align-items: center;
+  background: black;
+}
+footer > h4,
+footer > h4 > a {
+  margin: auto;
+  color: #f5f5f5;
+}
+footer > h4 > a:hover {
+  color: #181818;
+  background: #f5f5f5;
+  padding: 2px;
+  border-radius: 20px;
 }
